@@ -320,7 +320,7 @@ To install and run the Django Marketplace project locally, follow these steps:
 6. **Run the development server**: 
    python manage.py runserver
 
-
+```
 
   
-[Yadidiah Kanaparthi](https://github.com/YADIDidiah24)  2024
+- [Yadidiah Kanaparthi](https://github.com/YADIDidiah24)  - 2024
