@@ -127,3 +127,107 @@ This document provides an overview and explanation of the features and functiona
 ## Summary
 
 The Django Marketplace Item App provides functionality for managing items within the marketplace. Users can view, add, edit, and delete items as needed. The app includes views for displaying item listings, item details, and forms for adding/editing items. Additionally, users can filter items by category or search query to find what they're looking for more easily.
+
+
+
+# Django Marketplace Core App
+
+This document provides an overview and explanation of the features and functionality for the core components of a Django marketplace application.
+
+## Models
+
+### 1. Category
+- **Fields**:
+  - `name`: CharField for the category name.
+- **Behavior**:
+  - Orders categories by name.
+  - Provides a human-readable plural name for the model.
+- **Methods**:
+  - `__str__()`: Returns the name of the category.
+
+### 2. Item
+- **Fields**:
+  - `category`: ForeignKey to Category, related name 'items'.
+  - `name`: CharField for the item name.
+  - `description`: TextField for the item description (nullable).
+  - `price`: FloatField for the item price.
+  - `image`: ImageField for the item image (nullable).
+  - `is_sold`: BooleanField indicating whether the item is sold.
+  - `created_by`: ForeignKey to User, related name 'items'.
+  - `created_at`: DateTimeField for the item creation date.
+  - `link`: URLField for the item link (nullable).
+- **Methods**:
+  - `__str__()`: Returns the name of the item.
+
+## Views
+
+### 1. Index
+- **Functionality**: Displays the homepage with recent items and categories.
+- **Behavior**:
+  - Shows a selection of recent items.
+  - Lists all categories.
+
+### 2. Contact
+- **Functionality**: Displays the contact page.
+- **Behavior**: 
+  - Provides a basic contact form or information.
+
+### 3. Signup
+- **Functionality**: Handles user registration.
+- **Behavior**:
+  - Renders a form for users to sign up.
+  - Processes form submission and creates new user accounts.
+
+## URLs
+
+Defines URL patterns for core views.
+
+## Forms
+
+### 1. LoginForm
+- **Fields**:
+  - `username`: CharField for the username.
+  - `password`: CharField for the password.
+- **Behavior**:
+  - Renders a form for user login.
+  - Validates user credentials.
+
+### 2. SignupForm
+- **Fields**:
+  - `username`: CharField for the username.
+  - `email`: EmailField for the user's email address.
+  - `password1`: CharField for the password.
+  - `password2`: CharField for password confirmation.
+- **Behavior**:
+  - Renders a form for user registration.
+  - Validates user input and password confirmation.
+
+## Admin
+
+Registers models with the Django admin interface.
+
+## Templates
+
+### 1. Base Template
+- **Content**:
+  - Defines the base HTML structure for all pages.
+  - Includes navigation, header, content placeholder, and footer.
+
+### 2. Index Template
+- **Content**:
+  - Displays recent items and categories in a grid layout.
+
+### 3. Contact Template
+- **Content**:
+  - Displays the contact form or information.
+
+### 4. Login Template
+- **Content**:
+  - Renders a form for user login.
+
+### 5. Signup Template
+- **Content**:
+  - Renders a form for user registration.
+
+This Markdown document provides a structured overview of the features and functionality of the Django Marketplace Core App.
+
