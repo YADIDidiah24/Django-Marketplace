@@ -291,19 +291,28 @@ The Django Marketplace Item App provides functionality for managing items within
 
 ---
 
-## Installation Instructions
+# Installation Instructions
 
+```sh
 To install and run the Django Marketplace project locally, follow these steps:
 
-1. Clone the repository: git clone "https://github.com/YADIDidiah24/Django-Marketplace.git"
+1. **Clone the repository**: 
+   git clone "https://github.com/YADIDidiah24/Django-Marketplace.git"
 
-2. Install dependencies: pip install django
+2. **Install dependencies**: 
+   pip install django
 
-   additionally you can use vietual environments as well: python3 -m venv myenv then  myenv\Scripts\activate
-   
-3. Apply database migrations: python manage.py makemigrations
-                        python manage.py migrate.
+   Additionally, you can use virtual environments as well:
+   python3 -m venv myenv
+   source myenv/bin/activate  # for Unix/Mac
+   myenv\Scripts\activate     # for Windows
 
-4. Run the development server: python manage.py runserver
+3. **Apply database migrations**: 
+   python manage.py makemigrations
+   python manage.py migrate
+
+4. **Run the development server**: 
+   python manage.py runserver
+
   
 - [Yadidian Kanaparthi]([link-to-author-profile](https://github.com/YADIDidiah24)) - 2024
