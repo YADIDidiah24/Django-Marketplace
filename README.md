@@ -323,4 +323,4 @@ To install and run the Django Marketplace project locally, follow these steps:
 
 
   
-- [Yadidian Kanaparthi]([link-to-author-profile](https://github.com/YADIDidiah24)) - 2024
+- [Yadidian Kanaparthi](https://github.com/YADIDidiah24) - 2024
