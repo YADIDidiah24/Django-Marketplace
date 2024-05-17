@@ -67,3 +67,26 @@ This document provides an overview and explanation of the features and functiona
 ## Summary
 
 The Django Marketplace Conversation App enables users to communicate about items through conversations. It includes views for managing conversations, templates for displaying conversation data, and models for storing conversation details. Admin functionality is also provided for managing conversations and messages.
+
+
+
+# Django Marketplace Dashboard App
+
+This document provides an overview and explanation of the features and functionality for the dashboard system within a Django marketplace application.
+
+## Features
+
+### 1. Dashboard Index View
+- **Functionality**: Displays a list of items created by the logged-in user.
+- **Behavior**:
+  - Users must be logged in to access the dashboard.
+  - Shows a grid of items with details such as name, image, and price.
+
+### 2. Admin Configuration
+- **Functionality**: The dashboard app is registered in the admin interface for configuration.
+- **Behavior**:
+  - Admins can manage the dashboard configuration from the Django admin dashboard.
+
+## Summary
+
+The Django Marketplace Dashboard App allows users to manage and view their items. The main view (index) lists all items created by the logged-in user in a visually appealing grid format. Admin functionality is also provided for configuring the dashboard settings within the Django admin interface.
