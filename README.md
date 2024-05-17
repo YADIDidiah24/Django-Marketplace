@@ -293,54 +293,46 @@ This Markdown document provides a structured overview of the features and functi
 
 
 
-Django Marketplace Project
-│
-├── core/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── forms.py
-│   ├── models.py
-│   ├── templates/
-│   │   ├── core/
-│   │   │   ├── base.html
-│   │   │   ├── contact.html
-│   │   │   ├── index.html
-│   │   │   ├── login.html
-│   │   │   └── signup.html
-│   │   └── code/
-│   │       └── (HTML templates for core app)
-│   ├── urls.py
-│   └── views.py
-│
-├── conversation/
-│   ├── (Views, models, templates, etc. for conversation app)
-│   │   └── ...
-│
-├── dashboard/
-│   ├── (Views, models, templates, etc. for dashboard app)
-│   │   └── ...
-│
-├── item/
-│   ├── (Views, models, templates, etc. for item app)
-│   │   └── ...
-│
-├── media/
-│   ├── (Uploaded media files like item images)
-│   │   └── ...
-│
-├── static/
-│   ├── (Static files like CSS, JavaScript, etc.)
-│   │   └── ...
-│
-├── Django/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-│
-├── db.sqlite3
-│
-├── manage.py
-│
-└── README.md
+# Django Marketplace Project
+
+- [core](./core/)
+  - `admin.py`: Administration configurations for core app.
+  - `apps.py`: AppConfig for core app.
+  - `forms.py`: Forms for core app.
+  - `models.py`: Models for core app.
+  - [templates](./core/templates/)
+    - [core](./core/templates/core/)
+      - `base.html`: Base template for core app.
+      - `contact.html`: Contact page template.
+      - `index.html`: Homepage template.
+      - `login.html`: Login page template.
+      - `signup.html`: Signup page template.
+  - `urls.py`: URL configurations for core app.
+  - `views.py`: Views for core app.
+
+- [conversation](./conversation/)
+  - *(Views, models, templates, etc. for conversation app)*
+
+- [dashboard](./dashboard/)
+  - *(Views, models, templates, etc. for dashboard app)*
+
+- [item](./item/)
+  - *(Views, models, templates, etc. for item app)*
+
+- [media](./media/)
+  - *(Uploaded media files like item images)*
+
+- [static](./static/)
+  - *(Static files like CSS, JavaScript, etc.)*
+
+- [Django](./Django/)
+  - `__init__.py`: Initialization script for Django project.
+  - `asgi.py`: ASGI config for Django project.
+  - `settings.py`: Settings for Django project.
+  - `urls.py`: URL configurations for Django project.
+  - `wsgi.py`: WSGI config for Django project.
+
+- `db.sqlite3`: SQLite database file.
+
+- `manage.py`: Django's command-line utility for managing the project.
+
