@@ -1,0 +1,43 @@
+{% extends "core/base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-6 text-3xl">{{ title }}</h1>
+
+    <form method="post" action="." enctype="multipart/form-data" class="space-y-6 pt-3 pr-3 pl-3 pb-3 bg-sky-400 rounded-xl">
+        {% csrf_token %}
+
+        <div class="mb-6 text-gray-800">
+            {% for field in form %}
+                <div class="pb-4 text-xl font-semibold text-neutral-950 mb-2">
+                    {{ field.label_tag }}
+                    <p class='pb-3'></p>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <p class="text-sm  text-gray-600 pb-30 ">{{ field.help_text }}</p>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p class="text-red-500 text-sm">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+
+        {% if form.errors or form.non_field_errors %}
+            <div class="mb-6 p-6 bg-red-100 rounded-xl">
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <p class="text-red-500 text-sm">{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+
+                {% for error in form.non_field_errors %}
+                    <p class="text-red-500 text-sm">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <button type="submit" class="w-full py-3 px-6 text-lg bg-blue-500 hover:bg-blue-800 text-white rounded-lg shadow-md transition duration-300 transform hover:scale-102">Send</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Conversation{% endblock %}
+{% block content %}
+
+<div class="container mx-auto py-8">
+    <h2 class="mb-8 text-3xl font-bold text-center text-gray-900">Conversation</h2>
+    <div class="space-y-6 text-gray-800">
+        {% for message in conversation.messages.all %}
+            <div class="p-6 flex {% if message.created_by == request.user %} bg-blue-300 {% else %} bg-zinc-100 {% endif %} rounded-xl shadow-md">
+                <div>
+                    <p class="mb-2 text-lg font-semibold text-neutral-950"><strong>{{ message.created_by.username }}</strong> <span class="text-sm text-gray-600">@ {{ message.created_at }}</span></p>
+                    <p class="text-base text-gray-700">{{ message.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <form method="post" action="." class=" mt-6 space-y-6 bg-blue-400 p-6 rounded-xl shadow-md">
+        
+        {% csrf_token %}
+        <div class="mb-6 text-gray-800">
+            {% for field in form %}
+                <div class="pb-4 text-xl font-semibold text-neutral-950 mb-2">
+                    {{ field.label_tag }}
+                    <p class='pb-3'></p>
+                    {{ field }}
+                    {% if field.help_text %}
+                        <p class="text-sm  text-gray-600 pb-30 ">{{ field.help_text }}</p>
+                    {% endif %}
+                    {% for error in field.errors %}
+                        <p class="text-red-500 text-sm">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        
+        <button type="submit" class="w-full py-3 px-6 text-lg bg-blue-500 hover:bg-blue-800 text-white rounded-lg shadow-md transition duration-300 transform hover:scale-102">Send</button>
+    </form>
+</div>
+
+{% endblock %}
