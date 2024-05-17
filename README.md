@@ -291,3 +291,56 @@ This Markdown document provides a structured overview of the Django project conf
 
 This Markdown document provides a structured overview of the features and functionality of the Django Marketplace Core App.
 
+
+
+Django Marketplace Project
+│
+├── core/
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── templates/
+│   │   ├── core/
+│   │   │   ├── base.html
+│   │   │   ├── contact.html
+│   │   │   ├── index.html
+│   │   │   ├── login.html
+│   │   │   └── signup.html
+│   │   └── code/
+│   │       └── (HTML templates for core app)
+│   ├── urls.py
+│   └── views.py
+│
+├── conversation/
+│   ├── (Views, models, templates, etc. for conversation app)
+│   │   └── ...
+│
+├── dashboard/
+│   ├── (Views, models, templates, etc. for dashboard app)
+│   │   └── ...
+│
+├── item/
+│   ├── (Views, models, templates, etc. for item app)
+│   │   └── ...
+│
+├── media/
+│   ├── (Uploaded media files like item images)
+│   │   └── ...
+│
+├── static/
+│   ├── (Static files like CSS, JavaScript, etc.)
+│   │   └── ...
+│
+├── Django/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── db.sqlite3
+│
+├── manage.py
+│
+└── README.md
