@@ -1,4 +1,4 @@
-# Market Hub Marketplace in Django
+# Market Hub E-Commerce marketplace built in Django
 
 # Django Marketplace Core App 
 
