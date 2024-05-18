@@ -1,4 +1,6 @@
-# Django Marketplace Core App
+# Market Hub Marketplace in Django
+
+# Django Marketplace Core App 
 
 This document provides an overview and explanation of the features and functionality for the core components of a Django marketplace application.
 
