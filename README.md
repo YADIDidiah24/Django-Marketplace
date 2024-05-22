@@ -305,7 +305,7 @@ To install and run the Django Marketplace project locally, follow these steps:
    cd Django-Marketplace
 
 3. **Install dependencies**: 
-   pip install -r requirements.txt
+   pip install -Django
 
    Additionally, you can use virtual environments as well:
    python3 -m venv myenv
