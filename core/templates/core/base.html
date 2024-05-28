@@ -16,6 +16,7 @@
                 {% if request.user.is_authenticated %}
                     <li><a href="{% url 'conversation:inbox' %}" class="py-2 px-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-300">Inbox 📬</a></li>
                     <li><a href="{% url 'dashboard:index' %}" class="py-2 px-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-300">Dashboard 📊</a></li>
+                    <li><a href="{% url 'logout' %}" class="py-2 px-4 bg-red-500 text-white rounded-lg shadow-md hover:bg-red-600 transition duration-300">Logout 🚪</a></li>
                 {% else %}
                     <li><a href="{% url 'signup' %}" class="py-2 px-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-300">Sign up 📝</a></li>
                     <li><a href="{% url 'login' %}" class="py-2 px-4 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition duration-300">Log in 🔑</a></li>
@@ -49,7 +50,7 @@
                 <ul class="flex space-x-3">
                     <li><a href="https://github.com/YADIDidiah24" target="_blank" class="text-gray-200 hover:text-white">About</a></li>
                     <li><a href="https://www.linkedin.com/in/yadidiah-kanaparthi-926a7b204/" target="_blank" class="text-gray-200 hover:text-white">Contact 📞</a></li>
-                    <li><a href="#" class="text-gray-200 hover:text-white">Policy 📜</a></li>
+                    <li><a href="https://github.com/YADIDidiah24/Django-Marketplace" target="_blank" class="text-gray-200 hover:text-white">Documentation 📜</a></li>
                     <li><a href="#" class="text-gray-200 hover:text-white">Use ⚙️</a></li>
                 </ul>
             </div>
