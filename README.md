@@ -298,13 +298,13 @@ The Django Marketplace Item App provides functionality for managing items within
 ```sh
 To install and run the Django Marketplace project locally, follow these steps:
 
-1. **Clone the repository**: 
+1. Clone the repository: 
    git clone "https://github.com/YADIDidiah24/Django-Marketplace.git"
 
-2. **Navigate into the project directory**: 
+2. Navigate into the project directory: 
    cd Django-Marketplace
 
-3. **Install dependencies**: 
+3. Install dependencies: 
    pip install Django
 
    Additionally, you can use virtual environments as well:
@@ -312,14 +312,14 @@ To install and run the Django Marketplace project locally, follow these steps:
    source myenv/bin/activate  # for Unix/Mac
    myenv\Scripts\activate     # for Windows
 
-4. **Apply database migrations**: 
+4. Apply database migrations: 
    python manage.py makemigrations
    python manage.py migrate
 
-5. **Create a superuser (optional)**:
+5. Create a superuser (optional):
    python manage.py createsuperuser
 
-6. **Run the development server**: 
+6. Run the development server: 
    python manage.py runserver
 
 ```
